@@ -32,7 +32,7 @@ Note that the user does not have the specify the boundary condition of the probl
 
 ## How to Run the Code
 
-1. Open a terminal in the `project-1-wood-ian` folder
+1. Open a terminal in the `spring-mass-analysis` folder
 2. Make sure that the `input.json` file is in the same directory as the `main.py` file
 3. Alter the input file for the problem you are trying to solve
 4. To run the code, type `python3 main.py` into the terminal
