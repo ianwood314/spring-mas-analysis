@@ -8,8 +8,8 @@ This code calculates the displacement, elongation, and internal forces of each s
 
 The two dependencies for this code are the `scipy` and `numpy` Python code libraries. To install these libraries on your local machine, run the following lines of code:
 
-1. Download `scipy`: `pip3 install scipy`
-2. Download `numpy`: `pip3 install numpy`
+1. Type `pip3 install scipy` to  download `scipy`
+2. Type `pip3 install numpy` to download `numpy`
 
 For more information on `scipy`, please visit their documentation page [here](https://scipy.org). For more information about `numpy`, please visit their documentation page [here](https://numpy.org/doc/stable/user/whatisnumpy.html). 
 
