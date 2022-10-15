@@ -56,7 +56,7 @@ After running the `python3 main.py` command, the terminal will output the singul
 
 **Sample Output**
 ```
-ianwood@Ians-MacBook-Pro-2 project-1-wood-ian % python3 main.py
+ianwood@Ians-MacBook-Pro-2 spring-mass-analysis % python3 main.py
 -- Matrix A --
   Singular Values: [1.1755705  1.61803399 1.90211303]
   Eigenvalues: [1.38196601 2.61803399 3.61803399]
