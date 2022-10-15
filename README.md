@@ -32,7 +32,7 @@ Note that the user does not have the specify the boundary condition of the probl
 
 ### Discussion of Free-Free Boundary Condition
 
-
+When two free ends are the boundary condition, the problem becomes indeterminate. The indeterminacy of the problem stems from how when there are two open boundaries, both values of displacement at the boundary become unknowns. These additional unknowns creates an inbalance where the number of unknowns is greater than the number of knowns, making the problem indeterminate. 
 
 ## How to Run the Code
 
