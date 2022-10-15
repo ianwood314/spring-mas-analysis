@@ -36,10 +36,11 @@ When two free ends are the boundary condition, the problem becomes indeterminate
 
 ## How to Run the Code
 
-1. Open a terminal in the `spring-mass-analysis` folder
-2. Make sure that the `input.json` file is in the same directory as the `main.py` file
-3. Alter the input file for the problem you are trying to solve
-4. Run the code by typing `python3 main.py` into the terminal
+1. Download this folder and unzip
+2. Open a terminal in the `spring-mass-analysis` folder
+3. Make sure that the `input.json` file is in the same directory as the `main.py` file
+4. Alter the input file for the problem you are trying to solve
+5. Run the code by typing `python3 main.py` into the terminal
 
 ## How to Interpret the Results
 
