@@ -4,7 +4,7 @@ This code calculates the displacement, elongation, and internal forces of each s
 
 ## Initial Setup
 
-### Download Dependencies
+#### Download Dependencies
 
 The two dependencies for this code are the `scipy` and `numpy` Python code libraries. To install these libraries on your local machine, run the following lines of code:
 
@@ -13,7 +13,7 @@ The two dependencies for this code are the `scipy` and `numpy` Python code libra
 
 For more information on `scipy`, please visit their documentation page [here](https://scipy.org). For more information about `numpy`, please visit their documentation page [here](https://numpy.org/doc/stable/user/whatisnumpy.html). 
 
-### Define the Input
+#### Define the Input
 
 Before running the `main.py` script, the spring constants and masses for the spring-mass system must be defined by the user. The user will define these values as vectors in the `input.json` file as shown in the example below:
 
@@ -29,6 +29,10 @@ In the input above, we can see that the user has defined four springs each with 
 ## Supported Setup
 
 Note that the user does not have the specify the boundary condition of the problem as this can be ascertained from the number of springs and the number of masses. Specifically, if the number of springs is one more than the number of masses, then the boundary condition is `fixed-fixed`. If the number of springs is equal to the number of masses, then the boundary condition is `fixed-open`. Any other case is not supported by this code.
+
+### Discussion of Free-Free Boundary Condition
+
+
 
 ## How to Run the Code
 
