@@ -2,7 +2,8 @@ import json
 import numpy as np
 from scipy.sparse import diags
 from scipy.sparse import csc_matrix
-from scipy.sparse.linalg import svds
+from scipy.linalg import svd
+#from scipy.sparse.linalg import eigs
 import sys
 
 def read_input(file = './input.json'):
@@ -72,7 +73,7 @@ def construct_K(springconsts, bc):
 		maindiag = np.add(springconsts, temp)
 		offdiags = -springconsts[1:]
 	diagonals = [maindiag, offdiags, offdiags]
-	K = diags(diagonals, [0, -1, 1]).toarray()
+	K = diags(diagonals, [0, -1, 1])
 	return K
 
 def calc_disp(K, f):
@@ -83,7 +84,7 @@ def calc_disp(K, f):
 		K (numpy.ndarray): the stiffness matrix
 		f (numpy.ndarray): the force vector
 	'''
-	return np.linalg.inv(K).dot(f)
+	return np.linalg.inv(K.toarray()).dot(f)
 
 def calc_elong(u):
 	'''
@@ -128,7 +129,7 @@ def calc_conditions(matrix):
 		s**2 (numpy.ndarray): the eigenvalues of the matrix (the singular values squared)
 		condition number (float): defined as the ratio between the maximum and minimum eigenvalue
 	'''
-	U, s, VT = svds(matrix, k=min(matrix.shape)-1)
+	U, s, VT = svd(matrix.A)
 	print(f'  Singular Values: {s}')
 	print(f'  Eigenvalues: {s**2}')
 	print(f'  Condition Number: {max(s**2) / min(s**2)}')
