@@ -4,16 +4,16 @@ This code calculates the displacement, elongation, and internal forces of each s
 
 ## Initial Setup
 
-### Download Dependencies
+#### Download Dependencies
 
 The two dependencies for this code are the `scipy` and `numpy` Python code libraries. To install these libraries on your local machine, run the following lines of code:
 
-1. Download `scipy`: `pip3 install scipy`
-2. Download `numpy`: `pip3 install numpy`
+1. Type `pip3 install scipy` to  download `scipy`
+2. Type `pip3 install numpy` to download `numpy`
 
 For more information on `scipy`, please visit their documentation page [here](https://scipy.org). For more information about `numpy`, please visit their documentation page [here](https://numpy.org/doc/stable/user/whatisnumpy.html). 
 
-### Define the Input
+#### Define the Input
 
 Before running the `main.py` script, the spring constants and masses for the spring-mass system must be defined by the user. The user will define these values as vectors in the `input.json` file as shown in the example below:
 
@@ -30,12 +30,17 @@ In the input above, we can see that the user has defined four springs each with 
 
 Note that the user does not have the specify the boundary condition of the problem as this can be ascertained from the number of springs and the number of masses. Specifically, if the number of springs is one more than the number of masses, then the boundary condition is `fixed-fixed`. If the number of springs is equal to the number of masses, then the boundary condition is `fixed-open`. Any other case is not supported by this code.
 
+### Discussion of Free-Free Boundary Condition
+
+When two free ends are the boundary condition, the problem becomes indeterminate. The indeterminacy of the problem stems from how when there are two open boundaries, both values of displacement at the boundary become unknowns. These additional unknowns creates an inbalance where the number of unknowns is greater than the number of knowns, making the problem indeterminate. 
+
 ## How to Run the Code
 
-1. Open a terminal in the `spring-mass-analysis` folder
-2. Make sure that the `input.json` file is in the same directory as the `main.py` file
-3. Alter the input file for the problem you are trying to solve
-4. To run the code, type `python3 main.py` into the terminal
+1. Download this folder and unzip
+2. Open a terminal in the `spring-mass-analysis` folder
+3. Make sure that the `input.json` file is in the same directory as the `main.py` file
+4. Alter the input file for the problem you are trying to solve
+5. Run the code by typing `python3 main.py` into the terminal
 
 ## How to Interpret the Results
 
@@ -51,7 +56,7 @@ After running the `python3 main.py` command, the terminal will output the singul
 
 **Sample Output**
 ```
-ianwood@Ians-MacBook-Pro-2 project-1-wood-ian % python3 main.py
+ianwood@Ians-MacBook-Pro-2 spring-mass-analysis % python3 main.py
 -- Matrix A --
   Singular Values: [1.1755705  1.61803399 1.90211303]
   Eigenvalues: [1.38196601 2.61803399 3.61803399]
