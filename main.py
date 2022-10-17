@@ -129,7 +129,7 @@ def calc_conditions(matrix):
 		s**2 (numpy.ndarray): the eigenvalues of the matrix (the singular values squared)
 		condition number (float): defined as the ratio between the maximum and minimum eigenvalue
 	'''
-	U, s, VT = svd(matrix.A)
+	U, s, VT = svd(matrix.toarray())
 	print(f'  Singular Values: {s}')
 	print(f'  Eigenvalues: {s**2}')
 	print(f'  Condition Number: {max(s**2) / min(s**2)}')
